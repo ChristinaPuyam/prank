@@ -1,21 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>That’s all</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h2>Not a complaint.</h2>
-    <p>
-      Just a reminder that some invitations<br>
-      are felt even when they’re missing.
-    </p>
+<meta charset="UTF-8">
+<title>Confirmation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <p class="soft">
-      Consider this a quiet nudge.
-    </p>
-  </div>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: system-ui, sans-serif;
+  background: #eef1f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 38px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+h2 { font-size: 18px; }
+label { font-size: 14px; color: #374151; }
+
+button {
+  margin-top: 24px;
+  padding: 9px 16px;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+  <h2>Confirmation Required</h2>
+  <p style="font-size:14px;color:#4b5563;">
+    Please confirm that you have reviewed the notice.
+  </p>
+
+  <label>
+    <input type="checkbox" id="ack"> I acknowledge this information
+  </label>
+
+  <br><br>
+
+  <button onclick="next()">Continue</button>
+</div>
+
+<script>
+function next() {
+  const ack = document.getElementById("ack");
+  if (!ack.checked) {
+    alert("Acknowledgment required to proceed.");
+    return;
+  }
+  location.href = "review.html";
+}
+</script>
 </body>
 </html>
