@@ -2,15 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Important Notice</title>
+  <title>A Thought</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="center">
-  <h1>🚨 IMPORTANT 🚨</h1>
-  <p>You have been randomly selected.</p>
+<body>
+  <div class="container">
+    <h1>Before you close this</h1>
+    <p>
+      This isn’t accidental.<br>
+      It’s intentional.
+    </p>
 
-  <button onclick="goNext()">Continue</button>
+    <button onclick="next()">Continue</button>
+  </div>
 
-  <script src="script.js"></script>
+  <script>
+    function next() {
+      window.location.href = "message.html";
+    }
+  </script>
 </body>
 </html>
