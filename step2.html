@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Confirmation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
 body {
   margin: 0;
@@ -15,7 +14,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .card {
   background: white;
   padding: 38px;
@@ -24,15 +22,18 @@ body {
   border-radius: 8px;
   box-shadow: 0 8px 22px rgba(0,0,0,0.08);
 }
-
 h2 { font-size: 18px; }
 label { font-size: 14px; color: #374151; }
-
 button {
   margin-top: 24px;
   padding: 9px 16px;
   font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
 }
+button:hover { background: #f3f4f6; }
 </style>
 </head>
 
@@ -49,17 +50,18 @@ button {
 
   <br><br>
 
-  <button onclick="next()">Continue</button>
+  <button onclick="nextPage()">Proceed</button>
 </div>
 
 <script>
-function next() {
+function nextPage() {
   const ack = document.getElementById("ack");
   if (!ack.checked) {
     alert("Acknowledgment required to proceed.");
     return;
   }
-  location.href = "flower.html";
+  // Make sure this matches your file name exactly
+  window.location.href = "flowers.html";
 }
 </script>
 </body>
