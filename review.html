@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Review Status</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: system-ui, sans-serif;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  width: 90%;
+  max-width: 480px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+  <h2>Review in Progress</h2>
+  <p style="font-size:14px;color:#6b7280;">
+    Please wait while the system completes verification.
+  </p>
+  <p style="margin-top:18px;font-size:13px;color:#9ca3af;">
+    Estimated time: a few seconds
+  </p>
+</div>
+
+<script>
+setTimeout(() => {
+  location.href = "final.html";
+}, 4000);
+</script>
+</body>
+</html>
